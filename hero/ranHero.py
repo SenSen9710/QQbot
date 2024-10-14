@@ -24,3 +24,5 @@ with MysqlTool() as db:
         if 'assassin' in roles:
             assassin.append(data[x])
     print(len(mage),len(support),len(fighter),len(tank),len(marksman),len(assassin))
+
+

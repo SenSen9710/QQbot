@@ -35,3 +35,5 @@ class UpdateHero:
                     values = (hero_id, name, roles)
                     db.execute(sql, args=values, commit=True)
                 logging.info("已获取英雄最新数据")
+
+

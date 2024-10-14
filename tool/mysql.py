@@ -45,3 +45,7 @@ class MysqlTool:
             print(f"执行 SQL 语句出错：{e}")
             self.mysql_conn.rollback()
             raise e
+
+
+
+
