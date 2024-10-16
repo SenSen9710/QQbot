@@ -28,12 +28,11 @@ class UpdateHero:
                 logging.info("清空表数据完成")
                 for x in range(len(hero_data['hero'])):
                     hero_id = hero_data['hero'][x]['heroId']
+                    hero_name = hero_data['hero'][x]['alias']
                     name = hero_data['hero'][x]['title']
                     roles = hero_data['hero'][x]['roles']
                     roles = ','.join(map(str, roles))
-                    sql = 'INSERT INTO herodata (heroId, name, roles) VALUES (%s, %s, %s);'
-                    values = (hero_id, name, roles)
+                    sql = 'INSERT INTO herodata (heroId, heroName, name, roles) VALUES (%s, %s, %s, %s);'
+                    values = (hero_id, hero_name, name, roles)
                     db.execute(sql, args=values, commit=True)
                 logging.info("已获取英雄最新数据")
-
-
